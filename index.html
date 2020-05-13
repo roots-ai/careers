@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>ROOTS | Career</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/aiesec.png" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">   
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">          
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">          
+
+    <!-- Main style sheet -->
+    <link href="assets/css/style.css" rel="stylesheet">    
+    <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+
+
+   
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+body {
+  background-color: #fff;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #2dc997;
+}
+
+a:hover, a:active, a:focus {
+  color: #2dca98;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Prelaoder */
+#preloader {
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+/* Back to top button */
+.back-to-top {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #2dc997;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  padding: 30px 0;
+  height: 92px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 6px 0;
+  line-height: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}
+
+#header.header-fixed {
+  background: rgba(52, 59, 64, 0.9);
+  padding: 20px 0;
+  height: 72px;
+  transition: all 0.5s;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 70vh;
+  background: url(assets/img/drek.jpeg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: 5%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+.ptag
+{
+  color: #fff;
+  font-size: 190%;
+  margin-top: 5%;  
+  font-family: 'Amethysta';
+  margin-bottom: 0%;
+  align-content: center;
+}
+.ptag1
+{
+  color: #fff;
+  font-size: 190%;
+  font-family: 'Amethysta';
+}
+#hov:hover
+{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+
+}
+.gist
+{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0.1%;
+    font-size: 20px;
+    font-family: 'Lato';
+}
+
+.desc
+{
+      font-family: 'Lato';
+      color: #000;
+
+}
+.feature-thumb {
+    border: 2px solid #f0f0f0;
+    padding: 3em 2em;
+    border-color: #007bff;
+      box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+
+  }
+
+  .feature-thumb span {
+    background: #007bff;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .feature-thumb h3 {
+    margin: 10px 0;
+  }
+.highlights
+{
+    color: #000;
+    font-family: 'Lato';
+    margin-top: 20px;
+    font-size: 18px;
+}
+.highlights1
+{
+  color: #000;
+  font-family: 'Lato';
+  font-size: 18px;
+}
+
+    </style>
+  </head>
+  <body> 
+
+  <section id="hero">
+    <div class="hero-container">
+     <center></center>> <p class="ptag"><b>CAREERS AT ROOTS</b></p></center>
+      <center><h5 class="ptag1">Your dream job is waiting</h5></center>
+    </div>
+  </section>
+  <!-- End service  -->
+
+  <!-- Start about us -->
+
+  <!-- Start about us counter -->
+
+ <br>
+ <p class="gist">For students (starting today)</p>
+  <p class="gist">At Roots, we have several exciting opportunities available for university grads and students who want to grow with us in solving the challenge of bringing the entire globe on the Roots map. We move fast and bold. We believe in reaching to the depths of whatever we do, and executing things from the heart.</p><br><br><br>
+
+  <h2 style="text-align: center;font-family: 'Amiko';"><b>INTERNSHIPS WE OFFER</b></h2><br>
+ <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-latest-courses-content">
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single" id="hov" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);margin-bottom: 10px;">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="assets/img/globalv.png" alt="global volunteer"></a>
+                    <figcaption class="mu-latest-course-imgcaption"style="background-color: #FF0000;">
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <p class="desc" style="font-size: 18px;">Develop your leadership through a volunteering project contributing to the Sustainable Development Goals</p>
+                    <h4 class="desc" style="font-size: 18px;">Duration : 2 weeks</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);margin-bottom: 10px;">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="assets/img/globalt.png" alt="global talent"></a>
+                    <figcaption class="mu-latest-course-imgcaption"style="background-color: #17a2b8;">
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <p class="desc" style="font-size: 18px;">Develop your leadership while boosting your career prospects with an international internship in your field</p>
+                    <h4 class="desc" style="font-size: 18px;">Duration : 1-3 months</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="mu-latest-course-single" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);margin-bottom: 10px;">
+                  <figure class="mu-latest-course-img">
+                    <a href="#"><img src="assets/img/gee.png" alt="global entrepreneur"></a>
+                    <figcaption class="mu-latest-course-imgcaption"style="background-color: #20c997;">
+                    </figcaption>
+                  </figure>
+                  <div class="mu-latest-course-single-content">
+                    <p class="desc" style="font-size: 18px;">Develop your leadership through an entrepreneurial internship experience abroad</p>
+                    <h4 class="desc" style="font-size: 18px;">Duration : more than 6 months</h4>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+  </section><br><br><br><br><br>
+  <div>
+  <h2 style="text-align: center;font-family: 'Amiko';"><b>THREE REASONS WHY YOU SHOULD WORK WITH US</b></h2><br>
+ <section id="feature">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb"style="background-color: #fff;">
+                              <span>01</span>
+                              <h3 class="highlights"><b>Entrepreneurship</b></h3>
+                              <p class="highlights1">It's an opportunity to closely see and learn in a startup environment, where <b>things are executed at the speed of thought.</b></p><br>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb" style="background-color: #fff;">
+                              <span>02</span>
+                              <h3 class="highlights"><b>Mentorship</b></h3>
+                              <p class="highlights1">You would be <b>closely mentored</b> by our Founder who is an IITD grad, a serial entrepreneur and a product & technology evangelist since last 8 years.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="feature-thumb" style="background-color: #fff;">
+                              <span>03</span>
+                              <h3 class="highlights"><b>Work from anywhere</b></h3>
+                              <p class="highlights1">It doesn't matter where you work from. If you work well, we would be happy to welcome you in our core team.</p><br>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+</div>>
+  <!-- End about us counter -->
+  <!-- Start features section -->
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+  <!-- Start latest course section -->
+  <!-- Start footer -->
+  <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container" style="margin-left: 20%;">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>ABOUT</h4>
+                <p>Roots Travel App, an app for a modern day tourist to connect with different areas of local life: culinary, culture, history, nature and social.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>MORE</h4>
+                <ul>
+                  <li><a href="">Guides by Roots Travel App</a></li>
+                  <li><a href="#">How will I tour a city with Roots</a></li>
+                  <li><a href="">Localho club</a></li>
+                  <li><a href="">RTS Network</a></li>
+                </ul>
+              </div>
+            </div>
+             <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>FOLLOW</h4>
+                <ul>
+                  <li><a href="">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="">YouTube</a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>Copyright &copy; All Right Reserved. Singularity Location Solutions Pvt Ltd</p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  <!-- End footer -->
+  
+  <!-- jQuery library -->
+  <script src="assets/js/jquery.min.js"></script>  
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.js"></script>   
+  <!-- Slick slider -->
+  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <!-- Counter -->
+  <script type="text/javascript" src="assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>  
+  <!-- Mixit slider -->
+  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+  
+  
+  <!-- Custom js -->
+  <script src="assets/js/custom.js"></script> 
+
+  </body>
+</html>

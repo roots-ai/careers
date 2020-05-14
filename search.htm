@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+li{
+	display: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+
+<form class="example" style="margin:auto;max-width:300px">
+  <input id="myInput" type="text" placeholder="Search.." name="search2" onkeyup="myFunction()">
+  <button type="submit" ><i class="fa fa-search"></i></button>
+
+</form>
+<br>
+<div id="domains">
+	<div name="technology">
+	Technology
+		<ul class="h">
+			<li><a href="#">App developer</a></li>
+			<li><a href="#">Data science</a></li>
+			<li><a href="#">machine learning</a></li>
+			<li><a href="#">Website development</a></li>
+			<li><a href="#">HTMl</a></li>
+			<li><a href="#">Css</a></li>
+			<li><a href="#">javascript</a></li>
+			<li><a href="#">Ajax</a></li> 
+			<li><a href="#">Ror</a></li>
+		</ul>
+		<p>Technology is the sum of techniques, skills, methods, and processes used in the production of goods or services or in the accomplishment of objectives, such as scientific investigation.</p>
+	</div>
+	<div name="publishing">
+	Publishing
+		<ul class="h">
+			<li><a href="#">Copy Editors</a></li>
+			<li><a href="#">Writing translators</a></li>
+			<li><a href="#">Production Editors</a></li>
+			<li><a href="#">Publishers</a></li>
+		</ul>
+		<p>Publishing is the activity of making information, literature, music, software and other content available to the public for sale or for free. Traditionally, the term refers to the distribution of printed works, such as books, newspapers, and magazines</p>
+	</div>
+	<div name="management">
+	Management
+		<ul class="h">
+			<li><a href="#">Instagram Marketing associate</a></li>
+			<li><a href="#">Community Manager</a></li>
+			<li><a href="#">HR</a></li>
+		</ul>
+		<p>Management is the administration of an organization, whether it is a business, a not-for-profit organization, or government body.</p>
+	</div>
+</div>
+<script>
+    
+	function myFunction() {
+		//Declare variables
+  		var input, filter,  li, a, i, txtValue;
+        input = document.getElementById("myInput");
+    
+        filter = input.value.toUpperCase();
+    
+        
+        
+        li = document.getElementsByTagName("li");
+        
+  		var x = document.getElementById("domains");
+		for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            
+    			txtValue = a.textContent || a.innerText;
+    			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].closest("div").style.display = "block";
+                  
+    			} else {
+                    
+                    
+                    li[i].closest("div").style.display = "none";
+                }
+
+    	}
+
+	
+			
+    }
+</script>
+</body>
+</html> 

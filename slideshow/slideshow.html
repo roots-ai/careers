@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+    
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
@@ -43,16 +44,31 @@ img {vertical-align: middle;}
 }
 
 /* Caption text */
-.text {
+.centered {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 50px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
+.bottom-left {
+  color: #f2f2f2;
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.bottom-right {
+  color: #f2f2f2;
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -97,8 +113,9 @@ img {vertical-align: middle;}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+@media only screen and (max-width: 600px) {
+  .prev, .next,.text, .bottom-left, .bottom-right {font-size: 11px}
+  .centered{font-size:20px;}
 }
 </style>
 </head>
@@ -109,19 +126,43 @@ img {vertical-align: middle;}
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
   <img src="images/tech.jpg" style="width:100%;height:500px">
-  <div class="text">Technology</div>
+  <div class="centered"><b>Technology</b></div>
+  <div class="bottom-left">
+      <p><b>ORGANISATION</b><br /> Better English School</p>
+      <p><b>LOCATION</b><br/>Thai</p>
+  </div>
+  <div class="bottom-right">
+      <p><b>EARLIEST START DATE</b><br /> 1 June 2020</p>
+      <p><b>DURATION</b><br />13 Weeks</p>
+  </div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="images/publish.jpg" style="width:100%;height:500px">
-  <div class="text">Publishing</div>
+    <div class="numbertext">2 / 3</div>
+    <img src="images/publish.jpg" style="width:100%;height:500px">
+    <div class="centered"><b>Publishing </b></div>
+    <div class="bottom-left">
+        <p><b>ORGANISATION</b><br /> Better English School</p>
+        <p><b>LOCATION</b><br />Thai</p>
+    </div>
+    <div class="bottom-right">
+        <p><b>EARLIEST START DATE</b><br /> 1 June 2020</p>
+        <p><b>DURATION</b><br />13 Weeks</p>
+    </div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="images/management.jpg" style="width:100%;height:500px">
-  <div class="text">Management</div>
+    <div class="numbertext">3 / 3</div>
+    <img src="images/management.jpg" style="width:100%;height:500px">
+    <div class="centered"><b>Management</b></div>
+    <div class="bottom-left">
+        <p><b>ORGANISATION</b><br /> Better English School</p>
+        <p><b>LOCATION</b><br />Thai</p>
+    </div>
+    <div class="bottom-right">
+        <p><b>EARLIEST START DATE</b><br /> 1 June 2020</p>
+        <p><b>DURATION</b><br />13 Weeks</p>
+    </div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

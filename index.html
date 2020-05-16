@@ -7,12 +7,23 @@
     <title>ROOTS | Career</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/aiesec.png" type="image/x-icon">
 
     <!-- Font awesome -->
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+          <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+
+
+     <link href="lib/animate/animate.min.css" rel="stylesheet">
+
     <!-- Slick slider -->
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css">          
     <!-- Fancybox slider -->
@@ -26,13 +37,19 @@
     <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
     
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +60,7 @@
     <style type="text/css">
 
 body {
-  background-color: #fff;
+  background-color: #f8f9fa;
   color: #666666;
   font-family: "Open Sans", sans-serif;
 }
@@ -170,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background: url(assets/img/drek.jpeg) top center;
   background-size: cover;
   position: relative;
@@ -257,17 +274,21 @@ h1, h2, h3, h4, h5, h6 {
 .ptag
 {
   color: #fff;
-  font-size: 190%;
-  margin-top: 5%;  
-  font-family: 'Amethysta';
-  margin-bottom: 0%;
+  font-size: 50px;
+  font-family: 'Lato';
   align-content: center;
+  margin-top: 20%;
+  margin-bottom: 2px;
+  margin-left: 5%;
 }
 .ptag1
 {
+    margin-left: 5%;
+ margin-top: 0px;
   color: #fff;
-  font-size: 190%;
-  font-family: 'Amethysta';
+  font-size: 15px;
+  font-family: 'Lato';
+  margin-right: 60%;
 }
 #hov:hover
 {
@@ -336,27 +357,578 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 0 8px 10px 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  outline: none;
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2dc997;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  border: 1px solid #e7e7e7;
+}
+
+.nav-menu ul li {
+  background: #fff;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #333;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li a:hover {
+  background: #2dc997;
+  color: #fff;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(52, 59, 64, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #2dc997;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #2dc997;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(52, 59, 64, 0.9);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+.cd-title h1 {
+  font-size: 1.0rem;
+  font-weight: 500;
+}
+.cd-intro {
+  width: 90%;
+  max-width: 768px;
+  text-align: left;
+}
+
+.cd-intro {
+  margin: 4em auto;
+}
+
+
+.cd-words-wrapper {
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  margin-top: 16%;
+  margin-left: 5%;
+}
+.cd-words-wrapper b.is-visible {
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+.cd-headline.scale b {
+  opacity: 0;
+}
+.cd-headline.scale i {
+
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.is-visible .cd-headline.scale i {
+  opacity: 1;
+}
+.cd-headline.scale i.in {
+  -webkit-animation: scale-up 0.6s forwards;
+  -moz-animation: scale-up 0.6s forwards;
+  animation: scale-up 0.6s forwards;
+}
+.cd-headline.scale i.out {
+  -webkit-animation: scale-down 0.6s forwards;
+  -moz-animation: scale-down 0.6s forwards;
+  animation: scale-down 0.6s forwards;
+}
+
+.no-csstransitions .cd-headline.scale i {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 0;
+}
+
+.no-csstransitions .cd-headline.scale .is-visible i {
+  opacity: 1;
+}
+
+@-webkit-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes scale-up {
+  0% {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -moz-transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scale-down {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes scale-down {
+  0% {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes scale-down {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+.arrow {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.bounce {
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+#myCarousel {margin-left: 30px; margin-right: 30px;}
+
+.carousel-control {
+  top: 5%;
+
+
+}
+.carousel-inner {
+  width: 940px;
+  height: 640px;
+}
+.carousel-control.left, .carousel-control.right {
+  background: none;
+  color: #000;
+  border: none;
+  height: 500px;
+
+}
+.carousel-control.left {margin-left: -145px; color: black;}
+.carousel-control.right {margin-right: -145px; color: black;}
+
+.carousel-indicators .active
+{
+  background-color: #3a5cbf;
+}
+.carousel-indicators li
+{
+  background-color: #00ccff;
+}
     </style>
   </head>
   <body> 
 
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<header id="header">
+    <div class="container">
+
+      <div id="logo" >
+        <!--<a href="#hero"><img src="img/log.png" height="60%" width="70%" alt="" title="" /></img></a>-->
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#hero">Regna</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#">Career</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">For Employee</a></li>
+          <li><a href="#">SignUp</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  
   <section id="hero">
     <div class="hero-container">
-     <center></center>> <p class="ptag"><b>CAREERS AT ROOTS</b></p></center>
-      <center><h5 class="ptag1">Your dream job is waiting</h5></center>
+     
+<!-- cd-intro -->
+    <h1 class="cd-headline letters scale">
+      <span class="cd-words-wrapper">
+        <b class="is-visible" style="font-family: 'Lato';text-transform: none;" >Volunteer</b>
+        <b style="font-family: 'Lato';text-transform: none;">Intern</b>
+        <b style="font-family: 'Lato';text-transform: none;">Experience</b>
+        <b style="font-family: 'Lato';text-transform: none;">Impact</b>
+        <b style="font-family: 'Lato';text-transform: none;">Learn</b>
+        <b style="font-family: 'Lato';text-transform: none;">Develop Your Leadership</b>
+      </span>
+    </h1>
+
+     <p class="ptag"><b>with Roots.</b></p>
+      <p class="ptag1">Develop leadership skills by either volunteering or interning abroad with us. Experience something new and potentially life-changing, learn about new cultures, new people and yourself while impacting the people and communities you will work with.
+</p>
+ <p class="bounce"style="margin-top: 30px;margin-left: 48%;"><a href="#mydiv1" style="color: #000;" /><i class="arrow down"></i></p>
+
+</div>
     </div>
   </section>
   <!-- End service  -->
 
-  <!-- Start about us -->
-
-  <!-- Start about us counter -->
-
- <br>
+ 
+ <div id="mydiv1" style="margin-top: 3%;">
+  <br>
  <p class="gist">For students (starting today)</p>
-  <p class="gist">At Roots, we have several exciting opportunities available for university grads and students who want to grow with us in solving the challenge of bringing the entire globe on the Roots map. We move fast and bold. We believe in reaching to the depths of whatever we do, and executing things from the heart.</p><br><br><br>
+  <p class="gist">At Roots, we have several exciting opportunities available for university grads and students who want to grow with us in solving the challenge of bringing the entire globe on the Roots map. We move fast and bold. We believe in reaching to the depths of whatever we do, and executing things from the heart.</p></div>
 
-  <h2 style="text-align: center;font-family: 'Amiko';"><b>INTERNSHIPS WE OFFER</b></h2><br>
+
+  <h2 style="text-align: center;font-family: 'Amiko';margin-top: 10%;"><b>INTERNSHIPS WE OFFER</b></h2><br>
  <section>
     <div class="container">
       <div class="row">
@@ -383,7 +955,7 @@ h1, h2, h3, h4, h5, h6 {
                     </figcaption>
                   </figure>
                   <div class="mu-latest-course-single-content">
-                    <p class="desc" style="font-size: 18px;">Develop your leadership while boosting your career prospects with an international internship in your field</p>
+                    <p class="desc" style="font-size: 17.5px;">Develop your leadership while boosting your career prospects with an international internship in your field</p>
                     <h4 class="desc" style="font-size: 18px;">Duration : 1-3 months</h4>
                   </div>
                 </div>
@@ -405,9 +977,123 @@ h1, h2, h3, h4, h5, h6 {
               </div>
               </div>
             </div>
-  </section><br><br><br><br><br>
-  <div>
-  <h2 style="text-align: center;font-family: 'Amiko';"><b>THREE REASONS WHY YOU SHOULD WORK WITH US</b></h2><br>
+  </section><br>
+
+
+ <!-- <script type="text/javascript">
+    function myfunction()
+    {
+      var num=document.getElementById("managem").value;
+      if (num=='manage') {
+        localStorage.setItem( 'objectToPass', "hello" );
+      }
+    }
+
+  </script>-->
+  
+  <h2 style="text-align: center;font-family: 'Amiko';margin-top: 10%;"><b>OUR STORIES</b></h2><br>
+<br>
+<section>
+  <div class="container-fluid" style="margin-left: 12%;margin-right: 10%;">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000"> <!-- slider -->
+        <ol class="carousel-indicators" style="text-align: left;">
+      <li data-target="#myCarousel" data-slide-to="0" ></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2" ></li>
+    </ol>
+
+        <div class="carousel-inner">
+          <div class="active item"> <!-- item 1 -->
+            <div class="row" style="width: 110%;">
+        <div class="col-12 mt-3" >
+            <div class="card">
+                <div class="card-horizontal" style="background-color: #fff;">
+                  <div class="card-body" style="margin: 30px;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" height="15%" >
+                        <br><br>
+                        <p class="card-text" style="font-family: 'Lato';font-size: 19px;">"The children made this experience the best of my life. They made me feel part of their big family. They shared with me their light, dreams, laughter, hugs, feelings, and a little piece of their heart. I return to my country, Mexico, with my soul completely grateful and full for having had the opportunity to share such incredible and unforgettable moments with my little ones, and a part of my heart stays in that great school, having the hope and faith to see them soon."</p><br>
+                        <h3>Agent Tom</h3>
+                        <h5>Global Volunteer Intern in India</h5>
+                    </div>
+                    <div class="img-square-wrapper">
+                        <img class="" src="assets/img/dummy2.jpeg" height="640px" alt="Card image cap">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  
+          </div> <!-- end item -->
+          <div class="item"> <!-- item 2 -->
+            <div class="row" style="width: 110%;">
+        <div class="col-12 mt-3" >
+            <div class="card">
+                <div class="card-horizontal" style="background-color: #fff;">
+                  <div class="card-body" style="margin: 30px;">
+                        <img src="assets/img/gee.png" alt="global volunteer" height="15%" >
+                        <br><br>
+                        <p class="card-text" style="font-family: 'Lato';font-size: 19px;">"The children made this experience the best of my life. They made me feel part of their big family. They shared with me their light, dreams, laughter, hugs, feelings, and a little piece of their heart. I return to my country, Mexico, with my soul completely grateful and full for having had the opportunity to share such incredible and unforgettable moments with my little ones, and a part of my heart stays in that great school, having the hope and faith to see them soon."</p><br>
+                        <h3>Agent Tom</h3>
+                        <h5>Global Volunteer Intern in India</h5>
+                    </div>
+                    <div class="img-square-wrapper">
+                        <img class="" src="assets/img/dummyimg.png" height="640px" alt="Card image cap">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+          </div> <!-- end item -->
+          <div class="item"> <!-- item 3 -->
+            <div class="row" style="width: 110%;">
+        <div class="col-12 mt-3" >
+            <div class="card">
+                <div class="card-horizontal" style="background-color: #fff;">
+                  <div class="card-body" style="margin: 30px;">
+                        <img src="assets/img/globalt.png" alt="global volunteer" height="15%" >
+                        <br><br>
+                        <p class="card-text" style="font-family: 'Lato';font-size: 19px;">"The children made this experience the best of my life. They made me feel part of their big family. They shared with me their light, dreams, laughter, hugs, feelings, and a little piece of their heart. I return to my country, Mexico, with my soul completely grateful and full for having had the opportunity to share such incredible and unforgettable moments with my little ones, and a part of my heart stays in that great school, having the hope and faith to see them soon."</p><br>
+                        <h3>Agent Tom</h3>
+                        <h5>Global Volunteer Intern in India</h5>
+                    </div>
+                    <div class="img-square-wrapper">
+                        <img class="" src="assets/img/dummy2.jpeg" height="640px" alt="Card image cap">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+          </div> <!-- end item -->
+        </div>
+        </div> <!-- end carousel inner -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+      </div>
+    </div>
+</section>
+<script>
+    $(function(){
+
+        $('.carousel-control').click(function(e){
+            e.preventDefault();
+            $('#myCarousel').carousel( $(this).data() );
+        });
+
+    });//END document.ready
+</script>
+
+<br><br><br>
+  <h2 style="text-align: center;font-family: 'Amiko';margin-top: 10%;"><b>THREE REASONS WHY YOU SHOULD WORK WITH US</b></h2><br>
  <section id="feature">
           <div class="container">
                <div class="row">
@@ -513,7 +1199,19 @@ h1, h2, h3, h4, h5, h6 {
   
   
   <!-- Custom js -->
-  <script src="assets/js/custom.js"></script> 
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js1/main.js"></script>
+
 
   </body>
 </html>

@@ -7,7 +7,6 @@
     <title>ROOTS | Career</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/aiesec.png" type="image/x-icon">
 
     <!-- Font awesome -->
     <link href="assets/css/font-awesome.css" rel="stylesheet">
@@ -854,6 +853,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: none;
 
 }
+
+.carousel-indicators .active
+{
+  background-color: #3a5cbf;
+}
+.carousel-indicators li
+{
+  background-color: #00ccff;
+}
 .carousel-control.left {margin-left: -145px; color: black;}
 .carousel-control.right {margin-right: -145px; color: black;}
 
@@ -978,18 +986,17 @@ body.mobile-nav-active #mobile-nav-toggle {
         localStorage.setItem( 'objectToPass', "hello" );
       }
     }
-
   </script>-->
   
   <h2 style="text-align: center;font-family: 'Amiko';margin-top: 10%;"><b>OUR STORIES</b></h2><br>
 <br>
 <section>
   <div class="container-fluid" style="margin-left: 12%;margin-right: 10%;">
-  <div id="myCarousel" class="carousel slide"> <!-- slider -->
+  <div id="myCarousel" class="carousel slide"  data-ride="carousel" data-interval="3000"> <!-- slider -->
         <ol class="carousel-indicators" style="text-align: left;">
-      <li data-target="#myCarousel" data-slide-to="0" class="active" style="background-color: #3a5cbf;"></li>
-      <li data-target="#myCarousel" data-slide-to="1" style="background-color:#72bcd4;  "></li>
-      <li data-target="#myCarousel" data-slide-to="2" style="background-color:#72bcd4; "></li>
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
         <div class="carousel-inner">
@@ -1059,13 +1066,28 @@ body.mobile-nav-active #mobile-nav-toggle {
           </div> <!-- end item -->
         </div>
         </div> <!-- end carousel inner -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="icon-prev" style="height:50px;color: #000;"></span>
-</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="icon-next"></span>
-</a>
+         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
       </div>
     </div>
 </section>
+<script>
+    $(function(){
+
+        $('.carousel-control').click(function(e){
+            e.preventDefault();
+            $('#myCarousel').carousel( $(this).data() );
+        });
+
+    });//END document.ready
+</script>
 <br><br><br>
   <h2 style="text-align: center;font-family: 'Amiko';margin-top: 10%;"><b>THREE REASONS WHY YOU SHOULD WORK WITH US</b></h2><br>
  <section id="feature">

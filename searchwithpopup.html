@@ -5,31 +5,38 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title></title>
+    
+    
     <style>
-        body {font-family: Arial, Helvetica, sans-serif;}
-        * {box-sizing: border-box;}
-
-        #a{
-          padding: 10px;
-          font-size: 17px;
-          border: 1px solid grey;
-          float: left;
-          width: 80%;
-          background: #f1f1f1;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        #b{
+        * {
+            box-sizing: border-box;
+        }
+
+        #a {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
             float: left;
-          width: 20%;
-          padding: 10px;
-          background: #2196F3;
-          color: white;
-          font-size: 17px;
-          border: 1px solid grey;
-          border-left: none;
-          cursor: pointer;
-
+            width: 80%;
+            background: #f1f1f1;
         }
+
+        #b, #s {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
         .form-popup {
             display: none;
             position: fixed;
@@ -39,10 +46,12 @@
             padding: 50px;
             z-index: 9;
         }
-        .opportunities{
+
+        .opportunities {
             display: none;
         }
-        .btn-right,.btn-left {
+
+        .btn-right, .btn-left {
             background-color: CornflowerBlue;
             border: none;
             color: white;
@@ -54,75 +63,100 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-        .btn-right{
+
+        .btn-right {
             float: right;
         }
-        .btn-left{
-            float:left;
+
+        .btn-left {
+            float: left;
         }
+        
         /*the container must be positioned relative:*/
         .custom-select {
-          position: relative;
-          font-family: Arial;
+            position: relative;
+            font-family: Arial;
         }
 
-        .custom-select select {
-          display: none; /*hide original SELECT element:*/
-        }
+            .custom-select select {
+                display: none; /*hide original SELECT element:*/
+            }
 
         .select-selected {
-          background-color: DodgerBlue;
+            background-color: DodgerBlue;
         }
 
-        /*style the arrow inside the select element:*/
-        .select-selected:after {
-          position: absolute;
-          content: "";
-          top: 14px;
-          right: 10px;
-          width: 0;
-          height: 0;
-          border: 6px solid transparent;
-          border-color: #fff transparent transparent transparent;
-        }
+            /*style the arrow inside the select element:*/
+            .select-selected:after {
+                position: absolute;
+                content: "";
+                top: 14px;
+                right: 10px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-color: #fff transparent transparent transparent;
+            }
 
-        /*point the arrow upwards when the select box is open (active):*/
-        .select-selected.select-arrow-active:after {
-          border-color: transparent transparent #fff transparent;
-          top: 7px;
-        }
+            /*point the arrow upwards when the select box is open (active):*/
+            .select-selected.select-arrow-active:after {
+                border-color: transparent transparent #fff transparent;
+                top: 7px;
+            }
 
         /*style the items (options), including the selected item:*/
-        .select-items div,.select-selected {
-          color: #ffffff;
-          padding: 8px 16px;
-          border: 1px solid transparent;
-          border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-          cursor: pointer;
-          user-select: none;
+        .select-items div, .select-selected {
+            color: #ffffff;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+            cursor: pointer;
+            user-select: none;
         }
+       
 
         /*style items (options):*/
         .select-items {
-          position: absolute;
-          background-color: DodgerBlue;
-          top: 100%;
-          left: 0;
-          right: 0;
-          z-index: 99;
+            position: absolute;
+            background-color: DodgerBlue;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
         }
 
         /*hide the items when the select box is closed:*/
         .select-hide {
-          display: none;
+            display: none;
         }
 
         .select-items div:hover, .same-as-selected {
-          background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
         }
-        #contain_fields{
+       .jobs{
             display:none;
+            max-width:1000px; 
+            overflow:auto;
+            padding: 10px;
+            margin: 10px;
+            position: relative;
         }
+       .image{
+           float: left;
+           width:300px;
+           position: relative;
+        }
+        .content{
+           float: left;
+           width: 350px;
+           position: relative;
+           padding:10px;
+        }
+        .checked{
+            color: orange;
+            float: right;
+        }
+      
     </style>
 </head>
 <body>
@@ -133,155 +167,169 @@
     <div class="form-popup" id="myForm1">
         <br />
         <h1>Select your background</h1>
-        <div class="custom-select" style="width:200px;">
-            <select id="background" name="background">
-                <option value="0">IT</option>
-                <option value="1">Electronics</option>
-                <option value="2">Accountancy</option>
-                <option value="3">Biology</option>
-                <option value="4">Civil</option>
-                <option value="5">Management</option>
-            </select>
-        </div>
+        <input list="backgrounds" name="background" id="background" style="width:200px;">
+        <datalist id="backgrounds">
+            <option value="IT">
+            <option value="Publishing">
+            <option value="Management">
+            <option value="Creatives">
+            <option value="Writings">
+        </datalist>
+        
         <br />
         <button type="button" class="btn-right" onclick="document.getElementById('myForm2').style.display = 'block'; document.getElementById('myForm1').style.display = 'none';">Next</button>
 
     </div>
     <div class="form-popup" id="myForm2">
         <h1>Select a field you are interested in</h1>
-        <div class="custom-select" style="width:200px;">
-            <select id="field" class="custom-select">
-                <option value="IT">IT</option>
-                <option value="Publishing">Publishing</option>
-                <option value="Management">Management</option>
-                <option value="Electronics">Electronics</option>
-            </select>
-        </div>
+        <input list="fields" name="field" id="field" style="width:200px;">
+        <datalist id="fields">
+            <option value="IT">
+            <option value="Publishing">
+            <option value="Management">
+        </datalist>
         <br />
         <button type="button" class="btn-left" onclick="document.getElementById('myForm1').style.display = 'block'; document.getElementById('myForm2').style.display = 'none';">Back</button>
 
         <button type="button" class="btn-right" onclick="search()">Search Job Matches</button>
 
     </div>
-    <!-- Control buttons -->
+    
     <div class="opportunities" id="myForm3">
-        <div id="myBtnContainer">
-            <button class="btn" onclick="all()"> Show all</button>
-            <button class="btn active" onclick="" id="filter" value="abc"></button>
-        </div>
-
+        <br /><br /><h1>Results according to your search:</h1>
+                    <div style="max-width:1000px;">
+                        <button onclick="show_all()" id="s">Show all </button>
+                        <div style="float:right">
+                            <label>Sort by:</label>
+                            <select>
+                                <option>Relevance</option>
+                                <option>Application Closing Date</option>
+                                <option>Newest</option>
+                                <option>Duration: Descending</option>
+                                <option>Duration: Ascending</option>
+                                <option>Start Dates</option>
+                                <option>Price: High to Low</option>
+                                <option>Price: Low to High</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+        
+        <br /><br /><br />
         <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
         <div class="container" id="contain_fields">
-            <div class="IT">Web Development</div>
-            <div class="Publishing">Content writing</div>
-            <div class="Management ">Instagram</div>
-            <div class="Electronics ">Electro-magnet</div>
-            <div class="IT">App Developer</div>
-            <div class="Publishing ">Publisher</div>
-            <div class="Management">Finance</div>
-            <div class="Electronics">Electronics</div>
+            <div class="jobs IT">
+                <div class="image"><img src="images/tech.jpg" /></div>
+                <div class="content">
+                    <h1>Web Development</h1>
+                    <span>Mumbai &nbsp * &nbsp</span>
+                    <span>8 weeks &nbsp * &nbsp</span>
+                    <span>09th September 2020</span>
+                </div>
+                <span class="fa fa-star checked"></span>
+                <br />
 
+            </div>
+            <div class="jobs Publishing">
+                <div class="image"><img src="images/publish.jpg" /></div>
+                <div class="content">
+                    <h1>Content writing</h1>
+                    <span>Mumbai &nbsp * &nbsp</span>
+                    <span>8 weeks &nbsp * &nbsp</span>
+                    <span>09th September 2020</span>
+                </div>
+                <span class="fa fa-star checked"></span>
+                <br />
+            </div>
+            <div class="jobs Management">
+                <div class="image"><img src="images/management.jpg" /></div>
+                <div class="content">
+                    <h1>Instagram</h1>
+                    <span>Mumbai &nbsp * &nbsp</span>
+                    <span>8 weeks &nbsp * &nbsp</span>
+                    <span>09th September 2020</span>
+                </div>
+                <span class="fa fa-star checked"></span>
+                <br />
+            </div>
+            <div class="jobs IT">
+                <div class="image"><img src="images/tech.jpg" /></div>
+                <div class="content">
+                    <h1>App Developer</h1>
+                    <span>Mumbai &nbsp * &nbsp</span>
+                    <span>8 weeks &nbsp * &nbsp</span>
+                    <span>09th September 2020</span>
+                </div>
+                <span class="fa fa-star checked"></span>
+                <br />
+            </div>
+            <div class="jobs Publishing">
+                <div class="image"><img src="images/publish.jpg" /></div>
+                <div class="content">
+                    <h1>Publisher</h1>
+                    <span>Mumbai &nbsp * &nbsp</span>
+                    <span>8 weeks &nbsp * &nbsp</span>
+                    <span>09th September 2020</span>
+                </div>
+                <span class="fa fa-star checked"></span>
+                <br />
+            </div>
+            <div class="jobs Management">
+                <div class="image"><img src="images/management.jpg" /></div>
+                <div class="content">
+                    <h1>Finance</h1>
+                    <span>Mumbai &nbsp * &nbsp</span>
+                    <span>8 weeks &nbsp * &nbsp</span>
+                    <span>09th September 2020</span>
+                </div>
+                <span class="fa fa-star checked"></span>
+                <br />
+            </div>
         </div>
     </div>
     <script>
         /*function for filter*/
-        function search() {
+       
+
+       function search() {
 
 
-            document.getElementById('myForm3').style.display = 'block';
-            document.getElementById('myForm2').style.display = 'none';
-            var f = document.getElementById('field').value;
-            document.getElementById('filter').textContent = f;
-            document.getElementById('contain_fields').style.display = 'block';
-            var all = document.getElementsByClassName('contain_fields');
-            var dis = document.getElementsByClassName(f);
-            for (i = 0; i < all.length; i++) {
-                for (j = 0; j < dis.length; j++) {
-                    if (all[i].textContent == dis[j].textContent) {
-                        all[i].style.display = 'block';
-                        break;
-                    }
-                    else {
-                        all[i].style.display = 'none';
-                    }
-                }
+           document.getElementById('myForm3').style.display = 'block';
+           document.getElementById('myForm2').style.display = 'none';
+           var input = document.getElementById('field').value;
+
+         //  document.getElementById('filter').textContent = input;
+
+           var dis = document.getElementsByClassName(input);
+           for (i = 0; i < dis.length; i++) {
+               dis[i].style.display = 'block';
+           }
+           
+           
+          
+            
+        }
+        function show_all() {
+            var info = document.getElementsByClassName("IT");
+           
+            var man = document.getElementsByClassName("Management");
+            var Publ = document.getElementsByClassName("Publishing");
+            for (i = 0; i < info.length; i++) {
+               info[i].style.display = 'block';
             }
+           
+            for (i = 0; i < man.length; i++) {
+               man[i].style.display = 'block';
+            }
+            for (i = 0; i < Publ.length; i++) {
+                Publ[i].style.display = 'block';
+           }
+
         }
         
 
 
-        /**********************************for colouring select************************************************/
-        var x, i, j, selElmnt, a, b, c;
-        /*look for any elements with the class "custom-select":*/
-        x = document.getElementsByClassName("custom-select");
-        for (i = 0; i < x.length; i++) {
-            selElmnt = x[i].getElementsByTagName("select")[0];
-            /*for each element, create a new DIV that will act as the selected item:*/
-            a = document.createElement("DIV");
-            a.setAttribute("class", "select-selected");
-            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-            x[i].appendChild(a);
-            /*for each element, create a new DIV that will contain the option list:*/
-            b = document.createElement("DIV");
-            b.setAttribute("class", "select-items select-hide");
-            for (j = 1; j < selElmnt.length; j++) {
-                /*for each option in the original select element,
-                create a new DIV that will act as an option item:*/
-                c = document.createElement("DIV");
-                c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function (e) {
-                    /*when an item is clicked, update the original select box, and the selected item:*/
-                    var y, i, k, s, h;
-                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                    h = this.parentNode.previousSibling;
-                    for (i = 0; i < s.length; i++) {
-                        if (s.options[i].innerHTML == this.innerHTML) {
-                            s.selectedIndex = i;
-                            h.innerHTML = this.innerHTML;
-                            y = this.parentNode.getElementsByClassName("same-as-selected");
-                            for (k = 0; k < y.length; k++) {
-                                y[k].removeAttribute("class");
-                            }
-                            this.setAttribute("class", "same-as-selected");
-                            break;
-                        }
-                    }
-                    h.click();
-                });
-                b.appendChild(c);
-            }
-            x[i].appendChild(b);
-            a.addEventListener("click", function (e) {
-                /*when the select box is clicked, close any other select boxes,
-                and open/close the current select box:*/
-                e.stopPropagation();
-                closeAllSelect(this);
-                this.nextSibling.classList.toggle("select-hide");
-                this.classList.toggle("select-arrow-active");
-            });
-        }
-        function closeAllSelect(elmnt) {
-            /*a function that will close all select boxes in the document,
-            except the current select box:*/
-            var x, y, i, arrNo = [];
-            x = document.getElementsByClassName("select-items");
-            y = document.getElementsByClassName("select-selected");
-            for (i = 0; i < y.length; i++) {
-                if (elmnt == y[i]) {
-                    arrNo.push(i)
-                } else {
-                    y[i].classList.remove("select-arrow-active");
-                }
-            }
-            for (i = 0; i < x.length; i++) {
-                if (arrNo.indexOf(i)) {
-                    x[i].classList.add("select-hide");
-                }
-            }
-        }
-        /*if the user clicks anywhere outside the select box,
-        then close all select boxes:*/
-        document.addEventListener("click", closeAllSelect);
+        
     </script>
 
 

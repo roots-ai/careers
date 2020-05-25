@@ -197,23 +197,19 @@
     
     <div class="opportunities" id="myForm3">
         <br /><br /><h1>Results according to your search:</h1>
-                    <div style="max-width:1000px;">
-                        <button onclick="show_all()" id="s">Show all </button>
-                        <div style="float:right">
-                            <label>Sort by:</label>
-                            <select>
-                                <option>Relevance</option>
-                                <option>Application Closing Date</option>
-                                <option>Newest</option>
-                                <option>Duration: Descending</option>
-                                <option>Duration: Ascending</option>
-                                <option>Start Dates</option>
-                                <option>Price: High to Low</option>
-                                <option>Price: Low to High</option>
-                            </select>
-                        </div>
+        <div style="max-width:1000px;">
+            <button onclick="show_all()" id="s">Show all </button>
+            <div style="float:right">
+                <label>Sort by:</label>
+                <select id="mySelect" onchange="myFunction()">
+                    <option value="1">Alphabetically</option>
+                    <option value="2">Duration: Descending</option>
+                    <option value="3">Duration: Ascending</option>
+                    <option value="4">Start Dates</option>
+                </select>
+            </div>
                         
-                    </div>
+        </div>
         
         <br /><br /><br />
         <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
@@ -221,7 +217,7 @@
             <div class="jobs IT">
                 <div class="image"><img src="images/tech.jpg" /></div>
                 <div class="content">
-                    <h1>Web Development</h1>
+                    <h1 class="job_name">Web Development</h1>
                     <span>Mumbai &nbsp * &nbsp</span>
                     <span>8 weeks &nbsp * &nbsp</span>
                     <span>09th September 2020</span>
@@ -233,7 +229,7 @@
             <div class="jobs Publishing">
                 <div class="image"><img src="images/publish.jpg" /></div>
                 <div class="content">
-                    <h1>Content writing</h1>
+                    <h1 class="job_name">Content writing</h1>
                     <span>Mumbai &nbsp * &nbsp</span>
                     <span>8 weeks &nbsp * &nbsp</span>
                     <span>09th September 2020</span>
@@ -244,7 +240,7 @@
             <div class="jobs Management">
                 <div class="image"><img src="images/management.jpg" /></div>
                 <div class="content">
-                    <h1>Instagram</h1>
+                    <h1 class="job_name">Instagram</h1>
                     <span>Mumbai &nbsp * &nbsp</span>
                     <span>8 weeks &nbsp * &nbsp</span>
                     <span>09th September 2020</span>
@@ -255,7 +251,7 @@
             <div class="jobs IT">
                 <div class="image"><img src="images/tech.jpg" /></div>
                 <div class="content">
-                    <h1>App Developer</h1>
+                    <h1 class="job_name">App Developer</h1>
                     <span>Mumbai &nbsp * &nbsp</span>
                     <span>8 weeks &nbsp * &nbsp</span>
                     <span>09th September 2020</span>
@@ -266,7 +262,7 @@
             <div class="jobs Publishing">
                 <div class="image"><img src="images/publish.jpg" /></div>
                 <div class="content">
-                    <h1>Publisher</h1>
+                    <h1 class="job_name">Publisher</h1>
                     <span>Mumbai &nbsp * &nbsp</span>
                     <span>8 weeks &nbsp * &nbsp</span>
                     <span>09th September 2020</span>
@@ -277,7 +273,7 @@
             <div class="jobs Management">
                 <div class="image"><img src="images/management.jpg" /></div>
                 <div class="content">
-                    <h1>Finance</h1>
+                    <h1 class="job_name">Finance</h1>
                     <span>Mumbai &nbsp * &nbsp</span>
                     <span>8 weeks &nbsp * &nbsp</span>
                     <span>09th September 2020</span>
@@ -297,17 +293,11 @@
            document.getElementById('myForm3').style.display = 'block';
            document.getElementById('myForm2').style.display = 'none';
            var input = document.getElementById('field').value;
-
-         //  document.getElementById('filter').textContent = input;
-
            var dis = document.getElementsByClassName(input);
            for (i = 0; i < dis.length; i++) {
                dis[i].style.display = 'block';
            }
            
-           
-          
-            
         }
         function show_all() {
             var info = document.getElementsByClassName("IT");
@@ -328,7 +318,53 @@
         }
         
 
+       function myFunction() {
+           var user = document.getElementById("mySelect").value;
+           
+           if (user == 1) {
 
+
+               var list, i, switching, b, c, shouldSwitch;
+               list = document.getElementById("contain_fields");
+               switching = true;
+               
+          
+                  /* Make a loop that will continue until
+                  no switching has been done: */
+               while (switching) {
+
+                   // start by saying: no switching is done:
+                   switching = false;
+                   b = list.getElementsByClassName("jobs");
+                   // Loop through all list-items:
+
+                   c = list.getElementsByClassName("job_name");
+                   for (i = 0; i < (b.length - 1); i++) {
+                       // start by saying there should be no switching:
+                       shouldSwitch = false;
+                       /* check if the next item should
+                       switch place with the current item: */
+                       if (c[i].innerHTML.toLowerCase() > c[i + 1].innerHTML.toLowerCase()) {
+                           /* if next item is alphabetically
+                           lower than current item, mark as a switch
+                           and break the loop: */
+                           shouldSwitch = true;
+                           break;
+                       }
+                   }
+                    if (shouldSwitch) {
+                    /* If a switch has been marked, make the switch
+                    and mark the switch as done: */
+                    b[i].parentNode.insertBefore(b[i + 1], b[i]);
+                    switching = true;
+                }
+               }    
+           }
+           if (user == 2) {
+
+           }
+
+        }
         
     </script>
 

@@ -17,7 +17,6 @@
 
 
 
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -503,7 +502,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 {
   background-color: #fff;
   height: 10%;
-  margin-left: 8%;
+  margin-left: 7%;
   padding: 10px 16px;
   color: #f1f1f1;
 
@@ -604,6 +603,34 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-bottom-color: #17a2b8;
   border-bottom: 2px solid #17a2b8;
 }
+#video-highlight
+{
+  margin-top: 5%;
+  margin-left: 9%;
+  margin-right: 10%;
+  font-family: 'sans-serif';
+  font-size: 20px;
+}
+.card2
+{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-right: 7%;
+    height: 430px;
+
+}
+.img-card
+{
+  width: 15%;margin-left: 9%;
+}
+.img-card1
+{
+  width: 15%;margin-left: 4%;
+}
+.label-card
+{
+  width: 15%;font-size: 16px;text-align: center;font-weight: normal;
+}
+
     </style>
   </head>
   <body> 
@@ -774,13 +801,102 @@ body.mobile-nav-active #mobile-nav-toggle {
         </table>
         </div>
   </section>
+  <section id="video-highlight">
+    <h4><b>Leadership Development</b></h4>
+    <p>Our mission is to enable youth to develop four leadership qualities through our experiences and impact the world for the better.</p>
+      <div class="container py-3">
+    <div class="card2">
+      <div class="row ">
+        <div class="col-md-4">
+            <img src="assets/img/dummy.jpg" style="width: 130%;float: left;">
+          </div>
+          <div class="col-md-8 px-3">
+            <div class="card-block px-3" style="margin: 10%;margin-left: 13%;margin-top: 12%;">
+              <p style="text-align: center;font-family: 'sans-serif';color: #000;"><i>While interning/volunteering abroad is a challenging experience in itself, we aim to develop a set of leadership qualities within you through our support and guidance.</i></p>
+                <br>
+                <p style="margin-bottom: 1px;"><img src="assets/img/selfaware.png" class="img-card1">
+                  <img src="assets/img/empower.png" class="img-card">
+                  <img src="assets/img/world.png" class="img-card">
+                  <img src="assets/img/solution.png" class="img-card">
+                </p>
+
+
+                  <label class="label-card" style="margin-left: 4%;">Self-Awareness</label>
+                  <label class="label-card" style="margin-left: 8%;">Empowering others</label>
+                  <label class="label-card" style="margin-left: 9%;">World Citizen</label>
+                  <label class="label-card" style="margin-left: 9%;">Solution Oriented</label>
+                 
+    
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+  <!-- Start footer -->
+  <section  id="foote" style="margin-top: 10%;">
+   <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container" style="margin-left: 20%;">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>ABOUT</h4>
+                <p>Roots Travel App, an app for a modern day tourist to connect with different areas of local life: culinary, culture, history, nature and social.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>MORE</h4>
+                <ul>
+                  <li><a href="">Guides by Roots Travel App</a></li>
+                  <li><a href="#">How will I tour a city with Roots</a></li>
+                  <li><a href="">Localho club</a></li>
+                  <li><a href="">RTS Network</a></li>
+                </ul>
+              </div>
+            </div>
+             <div class="col-lg-3 col-md-3 col-sm-3">
+              <div class="mu-footer-widget">
+                <h4>FOLLOW</h4>
+                <ul>
+                  <li><a href="">Facebook</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="">YouTube</a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>Copyright &copy; All Right Reserved. Singularity Location Solutions Pvt Ltd</p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  </section>
+ <!-- End footer -->
+
   <script>
 
 window.onscroll = function() {myFunction()};
+
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
 function myFunction() {
-  if (window.pageYOffset > sticky ) {
+  if (window.pageYOffset > sticky && window.pageYOffset < 1255){
     header.classList.add("sticky");
   } else{
     header.classList.remove("sticky");
@@ -795,9 +911,9 @@ $(".top-active").click(function(){
  $(this).addClass("active");
 
 });
-
 </script>
 
+ 
     <script type="text/javascript" src="assets/js/slick.js"></script>
   <!-- Custom js -->
   <script src="lib/jquery/jquery.min.js"></script>

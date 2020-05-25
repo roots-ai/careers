@@ -599,6 +599,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .topnav a.active {
+  visibility: visible;
   color: #17a2b8;
   border-bottom-color: #17a2b8;
   border-bottom: 2px solid #17a2b8;
@@ -646,9 +647,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   </section>
   <section class="header2" id="myHeader">
             <div class="topnav">
-  <a class="active" href="#overview">Overview</a>
-  <a href="#Prerequisities">Prerequisities</a>
-  <a href="#Logistics">Logistics</a>
+  <a class="top-active" href="#overview">Overview</a>
+  <a href="#Prerequisities" class="top-active">Prerequisities</a>
+  <a href="#Logistics" class="top-active">Logistics</a>
 </div>
 
     <div class="card">
@@ -786,6 +787,14 @@ function myFunction() {
   }
 }
 
+</script>
+<script>
+$(".top-active").click(function(){
+
+ $(".top-active").removeClass("active");
+ $(this).addClass("active");
+
+});
 
 </script>
 

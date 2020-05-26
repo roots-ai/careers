@@ -23,8 +23,9 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<!------ Include the above in your HEAD tag ---------->
 
        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
@@ -44,6 +45,7 @@
     <link href='https://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -539,7 +541,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: inline-block;
   margin-right: 2%;
 }
-.card {
+.card1 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 35%;
   float: right;
@@ -611,6 +613,32 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: 'sans-serif';
   font-size: 20px;
 }
+@media screen and (max-width: 900px) {
+  .card2 {
+            -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+
+display: inline-block;        width: 400px;
+        height: 700px;
+        margin-left: 0px;
+
+  }
+  .video-highlight
+  {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .video-card
+  {
+    height: 100px;
+    width: 0%;
+  }
+  .img-card1 .img-card
+  {
+    align-items: left;
+  }
+}
 .card2
 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -618,9 +646,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 430px;
 
 }
+.video-card
+{
+  width: 130%;
+}
 .img-card
 {
-  width: 15%;margin-left: 9%;
+  width: 15%;margin-left: 6%;
 }
 .img-card1
 {
@@ -631,6 +663,205 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 15%;font-size: 16px;text-align: center;font-weight: normal;
 }
 
+#details
+{
+
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 1 -3px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10%;
+  }
+}/* Style the counter cards */
+.card3{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+   border-top: 5px solid #53a0e4;
+
+}
+.card3-title
+{
+  font-size: 20px;font-family: 'sans-serif';color: #000;
+}
+.card3-desc
+{
+  margin-top: 7%;font-family: 'sans-serif';font-size: 16px;
+}
+#mu-about-us {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-about-us .mu-about-us-area {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-left {
+  display: inline;
+  float: right;
+  width: 100%;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-left  {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-right: 4%;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-left  {
+  margin-left: 0;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-left  {
+  line-height: 30px;
+  list-style: circle;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-right {
+  display: inline;
+  float: left;
+  width: 70%;
+  display: block;
+  background-color: #ccc;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-right a {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-right a img {
+  width: 100%;
+}
+#mu-about-us .mu-about-us-area .mu-about-us-right a:after {
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  color: #ddd;
+  content: '\f04b';
+  font-family: fontAwesome;
+  font-size: 50px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+}
+
+/*==== about us dynamic video player ====*/
+#about-video-popup {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  bottom: 0;
+  z-index: 99999;
+}
+#about-video-popup span {
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+#about-video-popup iframe {
+  margin: 10% auto;
+  width: 650px;
+  height: 450px;
+}
+
+.mu-title {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+.mu-title h2 {
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.mu-title p {
+  color: #555;
+  letter-spacing: 0.3px;
+  line-height: 1.7;
+  padding: 0 120px;
+}
+
+.card4
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+
+}
+
+#opportunities
+{
+
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+figcaption {
+  color: white;
+  font-size: 30px;
+  font-family: 'sans-serif';
+  display: block;
+  position: absolute;
+top: 75px;
+left: 99px;
+}
+
+figure {
+  position: relative;
+}
+
+.star
+{
+ display: block;
+  position: absolute;
+top: 5px;
+left: 297px; 
+font-size:40px;
+color: white;
+}
+.title-card
+{
+  margin-left: 0px;font-family: 'sans-serif';font-size: 25px;text-align: center;
+}
+.desc-card
+{
+  margin-left: 0px;font-family: 'sans-serif';font-size: 14px;margin-bottom: 1px;
+}
+.desc-card1
+{
+  margin-left: 0px;font-family: 'sans-serif';font-size: 20px;
+}
     </style>
   </head>
   <body> 
@@ -679,7 +910,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   <a href="#Logistics" class="top-active">Logistics</a>
 </div>
 
-    <div class="card">
+    <div class="card1">
 <center><img src="assets/img/globalv.png" alt="global volunteer" style="width: 50%;height: 30%;"></center>
   <div class="container" style="margin-bottom: 0px;">
     <h4 class="card-title"><b>LANGUAGE</b></h4> 
@@ -801,18 +1032,24 @@ body.mobile-nav-active #mobile-nav-toggle {
         </table>
         </div>
   </section>
-  <section id="video-highlight">
-    <h4><b>Leadership Development</b></h4>
+       <section id="mu-about-us">
+        <div id="video-highlight">
+         <h4><b>Leadership Development</b></h4>
     <p>Our mission is to enable youth to develop four leadership qualities through our experiences and impact the world for the better.</p>
-      <div class="container py-3">
-    <div class="card2">
-      <div class="row ">
-        <div class="col-md-4">
-            <img src="assets/img/dummy.jpg" style="width: 130%;float: left;">
-          </div>
-          <div class="col-md-8 px-3">
-            <div class="card-block px-3" style="margin: 10%;margin-left: 13%;margin-top: 12%;">
-              <p style="text-align: center;font-family: 'sans-serif';color: #000;"><i>While interning/volunteering abroad is a challenging experience in itself, we aim to develop a set of leadership qualities within you through our support and guidance.</i></p>
+   </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" >
+          <div class="mu-about-us-area" style="  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">           
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-right">
+                             <img src="assets/img/dummy.jpg" class="video-card">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-left" style="margin-top: 20%;margin-left: 50%;">       
+          <p style="text-align: center;font-family: 'sans-serif';color: #000;font-size: 17px;"><i>While interning/volunteering abroad is a challenging experience in itself, we aim to develop a set of leadership qualities within you through our support and guidance.</i></p>
                 <br>
                 <p style="margin-bottom: 1px;"><img src="assets/img/selfaware.png" class="img-card1">
                   <img src="assets/img/empower.png" class="img-card">
@@ -821,21 +1058,148 @@ body.mobile-nav-active #mobile-nav-toggle {
                 </p>
 
 
-                  <label class="label-card" style="margin-left: 4%;">Self-Awareness</label>
-                  <label class="label-card" style="margin-left: 8%;">Empowering others</label>
-                  <label class="label-card" style="margin-left: 9%;">World Citizen</label>
-                  <label class="label-card" style="margin-left: 9%;">Solution Oriented</label>
-                 
-    
+                  <label class="label-card" style="margin-left: 7%;">Self-Awareness</label>
+                  <label class="label-card" style="margin-left: 5%;">Empowering others</label>
+                  <label class="label-card" style="margin-left: 5%;">World Citizen</label>
+                  <label class="label-card" style="margin-left: 8%;">Solution Oriented</label>
+          
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
+      </div>
+    </div>
+  </section>
+  <section id="details">
+    <div class="row">
+  <div class="column">
+    <div class="card3">
+      <h3 class="card3-title"><b>Outgoing Preparation Seminar</b></h3>
+      <p class="card3-desc">Before going abroad, a seminar will be hosted by your local office which includes goal and expectation setting to prepare you.<br><br></p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card3">
+        <h3 class="card3-title"><b>Incoming Preparation Seminar</b></h3>
+      <p class="card3-desc">Upon arrival, a seminar will be hosted by the local office to revisit your goals & expectations and support you with localization.<br><br></p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card3">
+      <h3 class="card3-title"><b>Experience Support</b></h3>
+      <p class="card3-desc">The local office abroad will provide personal & professional training. This may include one-on-one conversations, group learning or workshops.<br><br></p>
+    </div>
+  </div>
+</div>
+  </section>
+
+      <h2><b>SIMILAR OPPORTUNITIES</b></h2><br>      
+
+      <section id="opportunities">
+      <div class="row">
+  <div class="column">
+    <div class="card4">
+      <figure>
+      <img src="assets/img/oppor.jpg" style="width: 100%;">
+      <figcaption>Copy Editor</figcaption>
+      <span class="star">&#9734;</span>
+      </figure>
+      <div class="card-body">
+        <p class="title-card">US Language School</p>
+        <p class="desc-card">LOCATION<span style="margin-left: 55%;"></span>DURATION</p>
+        <p class="desc-card1">Ho Chin Min City<span style="margin-left: 30%;"></span>22 weeks</p>
+
       </div>
     </div>
   </div>
 
-  </section>
+  <div class="column">
+    <div class="card4">
+        <figure>
+      <img src="assets/img/oppor.jpg" style="width: 100%;">
+      <figcaption>Copy Editor</figcaption>
+            <span class="star">&#9734;</span>
+      </figure>
+      <div class="card-body">
+        <p class="title-card">US Language School</p>
+        <p class="desc-card">LOCATION<span style="margin-left: 55%;"></span>DURATION</p>
+        <p class="desc-card1">Ho Chin Min City<span style="margin-left: 30%;"></span>22 weeks</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card4">
+       <figure>
+      <img src="assets/img/oppor.jpg" style="width: 100%;">
+      <figcaption>Copy Editor</figcaption>
+            <span class="star">&#9734;</span>
+      </figure>
+           <div class="card-body">
+        <p class="title-card">US Language School</p>
+        <p class="desc-card">LOCATION<span style="margin-left: 55%;"></span>DURATION</p>
+        <p class="desc-card1">Ho Chin Min City<span style="margin-left: 30%;"></span>22 weeks</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+      </section>   
+
+      <section id="opportunities">
+      <div class="row">
+  <div class="column">
+    <div class="card4">
+      <figure>
+      <img src="assets/img/oppor.jpg" style="width: 100%;">
+      <figcaption>Copy Editor</figcaption>
+            <span class="star">&#9734;</span>
+      </figure>
+      <div class="card-body">
+        <p class="title-card">US Language School</p>
+        <p class="desc-card">LOCATION<span style="margin-left: 55%;"></span>DURATION</p>
+        <p class="desc-card1">Ho Chin Min City<span style="margin-left: 30%;"></span>22 weeks</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card4">
+       <figure>
+      <img src="assets/img/oppor.jpg" style="width: 100%;">
+      <figcaption>Copy Editor</figcaption>
+            <span class="star">&#9734;</span>
+      </figure>
+     <div class="card-body">
+        <p class="title-card">US Language School</p>
+        <p class="desc-card">LOCATION<span style="margin-left: 55%;"></span>DURATION</p>
+        <p class="desc-card1">Ho Chin Min City<span style="margin-left: 30%;"></span>22 weeks</p>
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card4">
+      <figure>
+      <img src="assets/img/oppor.jpg" style="width: 100%;">
+      <figcaption>Copy Editor</figcaption>
+            <span class="star">&#9734;</span>
+      </figure>
+      <div class="card-body">
+        <p class="title-card">US Language School</p>
+        <p class="desc-card">LOCATION<span style="margin-left: 55%;"></span>DURATION</p>
+        <p class="desc-card1">Ho Chin Min City<span style="margin-left: 30%;"></span>22 weeks</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
   <!-- Start footer -->
   <section  id="foote" style="margin-top: 10%;">
    <footer id="mu-footer">

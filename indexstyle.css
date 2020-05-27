@@ -13,12 +13,6 @@ a:hover, a:active, a:focus {
   outline: none;
   text-decoration: none;
 }
-
-p {
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-
  h2 {
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -1015,6 +1009,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .carousel-indicators
 {
+
   text-align: left;
 }
 .carousel-indicators .active
@@ -1027,4 +1022,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .carousel-control.left {margin-left: -145px; color: black;}
 .carousel-control.right {margin-right: -145px; color: black;}
-
+     @media(max-width: 600px) {
+        .container-fluid
+        {
+          margin: 0;
+          float: left;
+        }
+	
+}

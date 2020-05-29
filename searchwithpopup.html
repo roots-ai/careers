@@ -209,6 +209,18 @@
                     <option value="5">Relevance</option>
                 </select>
             </div>
+            
+            <div>
+                <span style="padding:20px;"><b>Filter by:</b></span>
+                <label>Domain:</label>
+                <select id="mydomains" onchange="mydomain()">
+                    <option value="6">Information Technology</option>
+                    <option value="7">Publishing</option>
+                    <option value="8">Management</option>
+                    
+                </select>
+
+            </div>
                         
         </div>
         
@@ -292,11 +304,11 @@
     </div>
     <script>
         /*function for filter*/
-       
+       var info = document.getElementsByClassName("IT");
+       var man = document.getElementsByClassName("Management");
+       var Publ = document.getElementsByClassName("Publishing");
 
        function search() {
-
-
            document.getElementById('myForm3').style.display = 'block';
            document.getElementById('myForm2').style.display = 'none';
            var input = document.getElementById('field').value;
@@ -307,10 +319,7 @@
            
         }
         function show_all() {
-            var info = document.getElementsByClassName("IT");
-           
-            var man = document.getElementsByClassName("Management");
-            var Publ = document.getElementsByClassName("Publishing");
+            
             for (i = 0; i < info.length; i++) {
                info[i].style.display = 'block';
             }
@@ -323,8 +332,43 @@
            }
 
         }
-        
 
+        function mydomain() {
+            var user_input = document.getElementById("mydomains").value;
+            if (user_input == 6) {
+                for (i = 0; i < info.length; i++) {
+                    info[i].style.display = 'block';
+                }
+                for (i = 0; i < man.length; i++) {
+                    man[i].style.display = 'none';
+                }
+                for (i = 0; i < Publ.length; i++) {
+                    Publ[i].style.display = 'none';
+                }
+            }
+            if (user_input == 7) {
+                for (i = 0; i < info.length; i++) {
+                    info[i].style.display = 'none';
+                }
+                for (i = 0; i < man.length; i++) {
+                    man[i].style.display = 'none';
+                }
+                for (i = 0; i < Publ.length; i++) {
+                    Publ[i].style.display = 'block';
+                }
+            }
+            if (user_input == 8) {
+                for (i = 0; i < info.length; i++) {
+                    info[i].style.display = 'none';
+                }
+                for (i = 0; i < man.length; i++) {
+                    man[i].style.display = 'block';
+                }
+                for (i = 0; i < Publ.length; i++) {
+                    Publ[i].style.display = 'none';
+                }
+            }
+        }
        function myFunction() {
            var user = document.getElementById("mySelect").value;
            

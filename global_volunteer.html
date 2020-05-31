@@ -27,6 +27,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
+
        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
           <script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -58,595 +59,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
  
      <link rel="stylesheet" type="text/css" href="internship.css">
-<style type="text/css">
-   body {
-  background-color: #f8f9fa;
-  color: #666666;
-  font-family: "Open Sans", sans-serif;
-}
+         <link rel="stylesheet" type="text/css" href="global_volunteer.css">
 
-/* Back to top button */
-.back-to-top {
-  display: none;
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  padding: 6px 12px 9px 12px;
-  font-size: 16px;
-  border-radius: 2px;
-  right: 15px;
-  bottom: 15px;
-  transition: background 0.5s;
-}
-
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 15px;
-  }
-}
-
-.back-to-top:focus {
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  outline: none;
-}
-
-.back-to-top:hover {
-  background: #2dc997;
-  color: #fff;
-}
-
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-  padding: 30px 0;
-  height: 92px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  transition: all 0.5s;
-  z-index: 997;
-}
-
-#header #logo {
-  float: left;
-}
-
-#header #logo h1 {
-  font-size: 36px;
-  margin: 0;
-  padding: 6px 0;
-  line-height: 1;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-#header #logo h1 a, #header #logo h1 a:hover {
-  color: #fff;
-}
-
-#header #logo img {
-  padding: 0;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  #header #logo h1 {
-    font-size: 26px;
-  }
-  #header #logo img {
-    max-height: 40px;
-  }
-}
-
-#header.header-fixed {
-  background: rgba(52, 59, 64, 0.9);
-  padding: 20px 0;
-  height: 72px;
-  transition: all 0.5s;
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 50vh;
-  background: url(assets/img/drek.jpeg) top center;
-  background-size: cover;
-  position: relative;
-}
-
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
-
-#hero:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  margin-top: 5%;
-  margin-left: 5%;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  flex-direction: column;
-}
-
-#hero h1 {
-  margin: 30px 0 10px 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-}
-
-#hero h2 {
-  color: #eee;
-  margin-bottom: 50px;
-  font-size: 24px;
-}
-
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-}
-
-#hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-#hero .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
-}
-.nav-menu, .nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-menu ul {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-}
-
-.nav-menu li {
-  position: relative;
-  white-space: nowrap;
-}
-
-.nav-menu > li {
-  float: left;
-}
-
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
-  display: block;
-}
-
-.nav-menu ul ul {
-  top: 0;
-  left: 100%;
-}
-
-.nav-menu ul li {
-  min-width: 180px;
-}
-
-/* Nav Menu Arrows */
-.sf-arrows .sf-with-ul {
-  padding-right: 30px;
-}
-
-.sf-arrows .sf-with-ul:after {
-  content: "\f107";
-  position: absolute;
-  right: 15px;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.sf-arrows ul .sf-with-ul:after {
-  content: "\f105";
-}
-
-/* Nav Meu Container */
-#nav-menu-container {
-  float: right;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  #nav-menu-container {
-    display: none;
-  }
-}
-
-/* Nav Meu Styling */
-.nav-menu a {
-  padding: 0 8px 10px 8px;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 13px;
-  outline: none;
-}
-
-.nav-menu > li {
-  margin-left: 10px;
-}
-
-.nav-menu > li > a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #2dc997;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.nav-menu ul {
-  margin: 4px 0 0 0;
-  border: 1px solid #e7e7e7;
-}
-
-.nav-menu ul li {
-  background: #fff;
-}
-
-.nav-menu ul li:first-child {
-  border-top: 0;
-}
-
-.nav-menu ul li a {
-  padding: 10px;
-  color: #333;
-  transition: 0.3s;
-  display: block;
-  font-size: 13px;
-  text-transform: none;
-}
-
-.nav-menu ul li a:hover {
-  background: #2dc997;
-  color: #fff;
-}
-
-.nav-menu ul ul {
-  margin: 0;
-}
-
-/* Mobile Nav Toggle */
-#mobile-nav-toggle {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999;
-  margin: 20px 20px 0 0;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  display: none;
-  transition: all 0.4s;
-  outline: none;
-  cursor: pointer;
-}
-
-#mobile-nav-toggle i {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  #mobile-nav-toggle {
-    display: inline;
-  }
-}
-
-/* Mobile Nav Styling */
-#mobile-nav {
-  position: fixed;
-  top: 0;
-  padding-top: 18px;
-  bottom: 0;
-  z-index: 998;
-  background: rgba(52, 59, 64, 0.9);
-  left: -260px;
-  width: 260px;
-  overflow-y: auto;
-  transition: 0.4s;
-}
-
-#mobile-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#mobile-nav ul li {
-  position: relative;
-}
-
-#mobile-nav ul li a {
-  color: #fff;
-  font-size: 16px;
-  overflow: hidden;
-  padding: 10px 22px 10px 15px;
-  position: relative;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  outline: none;
-}
-
-#mobile-nav ul li a:hover {
-  color: #fff;
-}
-
-#mobile-nav ul li li {
-  padding-left: 30px;
-}
-
-#mobile-nav ul .menu-has-children i {
-  position: absolute;
-  right: 0;
-  z-index: 99;
-  padding: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-
-#mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #2dc997;
-}
-
-#mobile-nav ul .menu-item-active {
-  color: #2dc997;
-}
-
-#mobile-body-overly {
-  width: 100%;
-  height: 100%;
-  z-index: 997;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(52, 59, 64, 0.9);
-  display: none;
-}
-
-/* Mobile Nav body classes */
-body.mobile-nav-active {
-  overflow: hidden;
-}
-
-body.mobile-nav-active #mobile-nav {
-  left: 0;
-}
-
-body.mobile-nav-active #mobile-nav-toggle {
-  color: #fff;
-}
-#mydiv1
-{
-  text-align: center;
-  font-family: 'Lato';
-  font-size: 30px;
-  color: #555;
-  margin-top: 5%;
-  font-weight: lighter;
-  margin-bottom: 15px;
-
-}
-#mydiv2
-{
-  text-align: center;
-  font-family: 'Lato';
-  font-size: 16px;
-}
-.about-area {
-  background-color: #f9f9f9;
-}
-
-.single-well>a {
-  display: block;
-}
-
-.single-well ul li {
-  color: #444;
-  display: block;
-}
-
-.single-well ul li i {
-  color: #3EC1D5;
-  font-size: 12px;
-}
-
-.single-well p {
-  color: #444;
-}
-#wrapper {
-
-width:100%;
-margin-top: 5%;
-}
-#img-icon
-{
-width:20%;
-float : left ;
-margin-right: 0px;
-
-}
-#img-desc
-{
-  width:70%;
-  float: left;
-
-}
-.desc
-{
-  font-family: 'Lato';
-  font-size: 21px;
-  color: #007bff;
-  margin-bottom: 10px;
-
-}
-.desc2
-{
-  font-family: 'Lato';
-  font-size: 16px;
-}
-/*FEATURED OPPORTUNITIES*/
-* {box-sizing: border-box}
-
-.mySlides {display: none}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.centered {
-  color: #f2f2f2;
-  font-size: 50px;
-  padding: 8px 12px;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.bottom-left {
-  color: #f2f2f2;
-  font-size: 20px;
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-.bottom-right {
-  color: #f2f2f2;
-  font-size: 20px;
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-@media only screen and (max-width: 600px) {
-  .prev, .next,.text, .bottom-left, .bottom-right {font-size: 11px}
-  .centered{font-size:20px;}
-}
-
-</style>
   </head>
   <body> 
 <header id="header">
@@ -687,6 +101,7 @@ margin-right: 0px;
 </div>
 </section>
 
+
 <section style="background-color: #fff;margin-top: 5%;">
  <div id="about">
   <div class="container">
@@ -704,8 +119,8 @@ margin-right: 0px;
                 </div>
               </div>
              <br><br>             <br><br>
-             <br><br>
-              <div id="wrapper">
+             <br>
+              <div id="wrapper" style="margin-top: 10%;">
                 <div id="img-icon"><img src="assets/img/impact.png"></div>
                 <div id="img-desc">
                   <p class="desc">Make your impact</p>
@@ -714,8 +129,8 @@ margin-right: 0px;
               </div>
              <br><br>             <br><br>
              <br><br>
-             <br><br>
-              <div id="wrapper">
+             
+              <div id="wrapper" style="margin-top: 10%;">
                 <div id="img-icon"><img src="assets/img/comfort.png"></div>
                 <div id="img-desc">
                   <p class="desc">Push yourself out of your comfort zone</p>
@@ -729,8 +144,8 @@ margin-right: 0px;
 </section>
 
   <!--  Featured Opportunities-->
-    <h2><b>FEATURED OPPORTUNITIES</b></h2><br>
-    <section style="margin: 0;">
+    <h2 id="mydiv1" style="color: #000;margin-top: 10%;"><i>Featured Opportunities</i></h2><br>
+    <section style="margin: 0;margin-bottom: 10%;">
     <div class="slideshow-container">
 <div class="mySlides ">
   <div class="numbertext">1 / 3</div>
@@ -809,14 +224,480 @@ function showSlides(n) {
       slides[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" reactive", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " reactive";
 }
 </script>
 
 
+  <section id="mu-about-us" style="background-color: #fff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-about-us-area">           
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-left" >
+                  <div style="margin-left: 15%;text-align: left;">
+                  <h3 class="desc" style="font-size: 25px;">Volunteer for the Global Goals</h3>
+                  <p style="font-family: 'Lato';font-size: 14px;margin-top: 10%;margin-bottom: 0px;"><b>Why do we provide Global Volunteer experiences?</b></p>
+                  <p style="font-family: 'Lato';font-size: 14px;margin-top: 15px;text-align: left;">Our Global Volunteer projects around the world exist because as AIESEC, we choose to shape what we do around what the world needs. We have committed to creating a youth movement to achieve the 17 Sustainable Development Goals by the year 2030.</p>
+                  <p style="font-family: 'Lato';font-size: 14px;margin-top: 15px;text-align: left;margin-bottom: 0px;">This all falls under our Youth 4 Global Goals initiative aimed at activating youth to achieve the Sustainable Development Goals.</p>
+                </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-right">                            
+                  <img src="assets/img/y4gg.gif" alt="img">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="mu-about-us-area">           
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-left" >
+                  <div style="margin-left: 15%;text-align: left;">
+                  <h3 class="desc" style="font-size: 25px;">What will you gain?</h3></div>
+                  <div style="margin-left: 10%;text-align: left;font-family: 'Lato';font-size: 15px;">
+                  <ol style="margin-top: 5%;list-style: disc;">
+                    <li style="color: #fd7e14;"><p style="color: #6c757d;margin: 0;margin-bottom: 10px;">Engage with all kinds of people towards achieving a purpose bigger than yourself. It's how you can empower others.</p></li>
+                    <li style="color: #6f42c1;"><p style="color: #6c757d;margin: 0;margin-bottom: 10px;">Volunteering abroad isn't easy, but surpassing challenges is what makes it worth it. You learn how to be solution-oriented.</p></li>
+                    <li style="color: #007bff;"><p style="color: #6c757d;margin: 0;margin-bottom: 10px;">Making your contribution and seeing your impact in real-time will show you that you can indeed make a difference the world. Become that world citizen that's needed more than ever.</p></li>
+                    <li style="color: #ffc107;"><p style="color: #6c757d;margin: 0;margin-bottom: 10px;">Going beyond what you know opens up new worlds for you. Find your values, explore your passions, and become more self-aware.</p></li>
+                  </ol>
+                </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="mu-about-us-right">                            
+                  <img src="assets/img/highlight.png" alt="img">
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="mu-abtus-counter" style="background-color: #f8f9fa;margin-top: 5%;margin-bottom: 5%;">
+    <div class="container" style="background-color: #f8f9fa;margin-left: 13%;">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-abtus-counter-area">
+            <div class="row">
+              <!-- Start counter item -->
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="mu-abtus-counter-single">
+                    <img src="assets/img/country.png">
+                    <p style="font-family: 'Lato';font-size: 35px;font-weight: bolder;margin: 0;color: #343a40;">120+ </p>
+                    <p style="font-family: 'Lato';font-size: 25px;font-weight: lighter;margin: 0;color:  #343a40;">Countries Covered</p>
+                </div>
+              </div>
+              <!-- End counter item -->
+              <!-- Start counter item -->
+              <div class="col-lg-3 col-md-3 col-sm-3" style="margin-left: 5%;">
+                  <div class="mu-abtus-counter-single">
+                      <img src="assets/img/experience.png">
+                      <p style="font-family: 'Lato';font-size: 35px;font-weight: bolder;margin: 0;color: #343a40;">2,8358+</p>
+                      <p style="font-family: 'Lato';font-size: 25px;font-weight: lighter;margin: 0;color:  #343a40;">Last year experiences</p>
+
+                </div>
+              </div>
+              <!-- End counter item -->
+              <!-- Start counter item -->
+              <div class="col-lg-3 col-md-3 col-sm-3" style="margin-left: 7%;">
+                <div class="mu-abtus-counter-single">
+                   <img src="assets/img/position.png">
+                   <p style="font-family: 'Lato';font-size: 35px;font-weight: bolder;margin: 0;color: #343a40;">167,298+</p>
+                   <p style="font-family: 'Lato';font-size: 25px;font-weight: lighter;margin: 0;color: #343a40; ">Positions opened</p>
+                </div>
+              </div>
+              <!-- End counter item -->
+               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+    <div style="background-color: #fff;margin-top: 0%;"><br><br><br><br>
+          <h2 style="margin: 0;" id="mydiv1" style="color: #000;"><i>A life-changing experience few clicks away</i></h2><br>
+
+    <div style="margin-left: 5%;margin-right: 5%;margin-top: 3%;">   
+    <div class="row1">
+  <div class="column">
+    <div class="card3">
+      <h3 class="card3-title">1. Sign up and connect</h3>
+      <p class="card3-desc">Build your profile on the AIESEC Opportunities Portal and we can start matching you with opportunities.</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card3">
+        <h3 class="card3-title">2. Search</h3>
+      <p class="card3-desc">Filter search results to find the perfect opportunity that fits your skills and interests.<br><br></p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card3">
+      <h3 class="card3-title">3. Interview</h3>
+      <p class="card3-desc">Once we find a match, we can start the process of organizing interviews and putting things in place for your internship.</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card3">
+      <h3 class="card3-title">4. Confirm and Go</h3>
+      <p class="card3-desc">Congratulations! You’ll have made it through the interview. From here we’ll get you prepared for your new adventure.</p>
+    </div>
+  </div>
+</div>
+</div>
+<br><br><br><br>
+</div>
+
+  <h2><b>OUR STORIES</b></h2><br>
+<br>
+<section class="caro">
+  <div class="container-fluid">
+  <div id="myCarousel" class="carousel slide"  data-ride="carousel" data-interval="3000"> <!-- slider -->
+        <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+     <li data-target="#myCarousel" data-slide-to="4"></li>
+     <li data-target="#myCarousel" data-slide-to="5"></li>
+    <li data-target="#myCarousel" data-slide-to="6"></li>
+   <li data-target="#myCarousel" data-slide-to="7"></li>
+    <li data-target="#myCarousel" data-slide-to="8"></li>
+   <li data-target="#myCarousel" data-slide-to="9"></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+    </ol>
+
+        <div class="carousel-inner">
+          <div class="active item"> <!-- item 1 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                  <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">I always wanted to work with a company which is into a travel and lifestyle. When I got this opportunity I did not think twice before applying for it. Although I'm with Roots Travel only for 2 weeks and I'm almost at the end of my internship, I learnt a lot from the experience I had here. Understood how actually Instagram works and how much of behind the scenes work is required before you put up a post of Instagram or any other social media for that purpose. Got to work with some amazing people who are so driven and self motivated. 
+                      </p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Nikita Shriram</b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;" class="card-text2"><b>Global Volunteer Intern in India</b></p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/nik.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+       <div class="item"> <!-- item 2 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br><brs>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">I am handling different social media platforms for the app and there is a professional team mentoring and helping me whenever I get stuck. The learning is rich and practical and will stay with me forever.</p><br>
+                       <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;"  class="card-text2"><b>Beena Gautam</b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/beena.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+         <div class="item"> <!-- item 3 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                                                <br><br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">It is so far going pretty well.. I have learned pretty much in just 4 days of internship ..</p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Kartik Aggarwal</b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/kartik.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+         <div class="item"> <!-- item 4 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">I am a Marketing intern over here, working from home. Nice to work with creative people around who are always available for helping you round the clock. The thing I liked while working over here is, if the intern has an opinion or idea which can bring about some positive change, the suggestions are tried out. In a longer run you end up learning new things and under able-mentorship you tend to get aware about the areas where you were going wrong. So in short, time spent working over here is a positive spike to my learning curve.</p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Biswadeep Mohanty </b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/biswadeep.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="item"> <!-- item 5 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br>
+                        <br><br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">This internship is providing me a great experience in strengthening my professional and other skills like communication, work ethics and team work which can usually be developed only through actual experience.</p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Hrisha Rashmi</b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/hr.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+     <div class="item"> <!-- item 6 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br>
+                        <br><br><br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">It's a good experience to work with roots. <br>My work is related to the things I like so it adds to the better results. 
+</p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Siddharth Dixit </b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/siddharth.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="item"> <!-- item 7 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br><br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 17px;color: #343a40;">My experience with Roots has been very fruitful.I have been learning a lot of new skills and gained some very useful practical knowledge and industry insight, the work culture here is fantastic and the channels of communication are very effective,if you feel your idea is worth considering the founder himself will look into it.
+                        </p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Vinayak Mishra</b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/vinayak.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          </div>
+
+     <div class="item"> <!-- item 8 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+<p class="card-text" style="font-family: sans-serif;font-size: 16px;color: #343a40;">Being an intern at Roots was a memorable and remarkable experience since, it was my first ever internship. My one month Internship at Roots, allowed me to grow personally thereby also help me to gain new skills in how to communicate with the fellow interns, how to evaluate the performance of the interns, that i didn’t previously have. I also get a better understanding of managing things in an organised manner. And most importantly, I gained a new sense of professionalism and a clear view of what it meant to be in the professional world. I also learned various things from my Interns, basically their work, what they have to do, how they have to do, each and everything. Throughout this one month internship I gained valuable experience then i will cherish forever, I was able to improve my soft skills, my communication skills. I am now able to manage things properly, in orderly form. I enjoyed working with such a great and Impressive team. Three Cheers to ROOTS 👏🏻🤗</p>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 0px;" class="card-text2"><b>Rashi Jain </b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/rashi.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          </div>
+
+     <div class="item"> <!-- item 9 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br><br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 19px;color: #343a40;">I am enjoying my work and I am also increasing my knowledge.
+                        </p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Vishal Saini </b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/vishal.jpeg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          </div>
+
+   <div class="item"> <!-- item 6 -->
+            <div class="row" >
+         <div class="col-md-12" style="background-color: #fff;" class="conte">
+              <div class="col-lg-6 col-md-6" >
+                <div class="mu-about-us-left" style="padding: 5%;">
+                        <img src="assets/img/globalv.png" alt="global volunteer" style="height: 85px;" >
+                        <br><br><br><br>
+                        <p class="card-text" style="font-family: sans-serif;font-size: 19px;color: #343a40;">Roots is a  Cool places with cool people gives me warm experience 
+                        </p><br>
+                         <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;" class="card-text2"><b>Jaiganesh S </b></p>
+                        <p style="font-family: sans-serif;font-size: 18px;margin-bottom: 1px;color: #6c757d;"><b>Global Volunteer Intern in India</b></p>
+
+               </div>
+              </div>
+              <div class="col-lg-6 col-md-6" class="imgmedia">
+                <div class="mu-about-us-right">                            
+                        <img class="" src="assets/img/jaiganesh.jpg" height="640px" alt="Card image cap">
+                </div>
+
+              </div>
+            </div>
+          </div>
+          </div>
+    
+        </div> <!-- end carousel inner -->
+         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+      </div>
+    </div>
+</section>
+<script>
+    $(function(){
+
+        $('.carousel-control').click(function(e){
+            e.preventDefault();
+            $('#myCarousel').carousel( $(this).data() );
+        });
+
+    });//END document.ready
+</script>
+
+ 
+<section style="background-color: #fff;margin-top: 10%;">
+  <br><br>
+ <div id="about">
+  <div class="container">
+      <div class="row">
+        <!-- single-well start-->
+        <div class="col-md-6 col-sm-6 col-xs-12">
+                  <img src="assets/img/dum.png" alt="" style="margin-left: 10%;float: left;width: 80%;">
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12" style="left: 0;">
+                      <p style="margin:0;" id="mydiv1" style="color: #000;"><i>Feel at ease with our support</i></p><br>
+
+              <div id="wrapper" style="margin-top: 1%;">
+                <div id="img-icon"><img src="assets/img/logistic.png"></div>
+                <div id="img-desc">
+                  <p class="desc">Logistics Support</p>
+                  <p class="desc2">We ensure you get the right visa, arrival pick-up information before your experience and departure instructions post-experience.</p>
+                </div>
+              </div>
+             <br><br>             <br><br>
+             <br>
+              <div id="wrapper" style="margin-top: 10%;">
+                <div id="img-icon"><img src="assets/img/job.png"></div>
+                <div id="img-desc">
+                  <p class="desc">Clear job description</p>
+                  <p class="desc2">We accompany you to the workplace on the first day, ensure your job description and goals are clear, and working hours/duration align to the initial description.</p>
+                </div>
+              </div>
+             <br><br>             <br><br>
+             <br><br>
+             <div id="wrapper" style="margin-top: 10%;">
+                <div id="img-icon"><img src="assets/img/safe.png"></div>
+                <div id="img-desc">
+                  <p class="desc">Learning experience</p>
+                  <p class="desc2">We set clear expectations, provide cultural preparation and facilitate learning spaces before and during experiences.</p>
+                </div>
+              </div>
+             <br><br>             <br><br>
+             <br><br>
+             
+              <div id="wrapper" style="margin-top: 10%;">
+                <div id="img-icon"><img src="assets/img/learning.png"></div>
+                <div id="img-desc">
+                  <p class="desc">Push yourself out of your comfort zone</p>
+                  <p class="desc2">If you don't try and experience new things, you'll never find your full potential. Challenge yourself, and discover the best version of you.</p>
+                </div>
+              </div>
+        <!-- End col-->
+      </div>
+      </div>
+    </div>
+</section>
+
+ 
   <!-- Start footer -->
   <section  id="foote" style="margin-top: 10%;">
    <footer id="mu-footer">

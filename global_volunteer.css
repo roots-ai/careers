@@ -659,7 +659,10 @@ margin-right: 0px;
 }
 .carousel-indicators
 {
-text-align:left;
+      text-align: left;
+    float: left;
+    left: 22% !important;
+    right: inherit;
 }
 .carousel-indicators .active
 {
@@ -680,11 +683,13 @@ text-align:left;
   .item{margin: -1.0; float: left;width: 45%;}
   .carousel-control.left,.carousel-control.right{margin: -2.0%;top: -20%;}
   .row{margin: -1.0%;}
+  .carousel-indicators{text-align: center;margin-left: 5%;}
   .container-fluid{margin: -1.0%;}
   #myCarousel{margin: 0;}
 .imgmedia{height: 50%;padding: 5%;}
 .caro{margin: -1.0%;}
 .conte{margin: -1.0%; width: 20%;}
-.card-text{margin: -1.0%;margin-bottom: 1px;font-size: 5px;}
+.card-text{margin: -1.0%;margin-bottom: 1px;font-size: 5px;margin-right: 7%;}
 .card-text2{margin: -1.0%;margin-bottom: 0;font-size: 5px;margin-top: 2px;}
 }
+
